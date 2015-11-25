@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  host: 127.0.0.1
+  pool: 5
+  encodig: utf8
+  user: bollogs
+  password: bollogs
+
+development:
+  <<: *default
+  database: bollogs_dev
+test:
+  <<: *default
+  database: bollogs_test
+
+production:
+  <<: *default
+  database: bollogs
