@@ -15,7 +15,11 @@
 	  <li><a href="#">My Profile</a></li>
 	</ul>
       </li>
-      <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
+      <li>
+        <%= link_to("admin/logout") do %>
+          <i class="glyphicon glyphicon-lock"></i> Logout
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
