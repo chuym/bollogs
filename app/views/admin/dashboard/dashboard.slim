@@ -1,0 +1,233 @@
+ul.list-inline.pull-right
+  li
+    a href="#" 
+      i.glyphicon.glyphicon-cog
+  li.dropdown
+    a.dropdown-toggle data-toggle="dropdown" href="#" 
+      i.glyphicon.glyphicon-comment
+      span.count 3
+    ul.dropdown-menu role="menu" 
+      li
+        a href="#"  1. Is there a way..
+      li
+        a href="#"  2. Hello, admin. I would..
+      li
+        a href="#" 
+          strong All messages
+  li
+    a href="#" 
+      i.glyphicon.glyphicon-user
+  li
+    a data-toggle="modal" href="#addWidgetModal" title=("Add Widget") 
+      span.glyphicon.glyphicon-plus-sign
+      | Add Widget
+a href="#" 
+  strong
+    i.glyphicon.glyphicon-dashboard
+    | My Dashboard
+hr/
+.row
+  /! center left
+  .col-md-6
+    .well
+      | Inbox Messages
+      span.badge.pull-right 3
+    hr/
+    .btn-group.btn-group-justified
+      a.btn.btn-primary.col-sm-3 href="#" 
+        i.glyphicon.glyphicon-plus
+        br/
+        | Service
+      a.btn.btn-primary.col-sm-3 href="#" 
+        i.glyphicon.glyphicon-cloud
+        br/
+        | Cloud
+      a.btn.btn-primary.col-sm-3 href="#" 
+        i.glyphicon.glyphicon-cog
+        br/
+        | Tools
+      a.btn.btn-primary.col-sm-3 href="#" 
+        i.glyphicon.glyphicon-question-sign
+        br/
+        | Help
+    hr/
+    .panel.panel-default
+      .panel-heading
+        h4 Reports
+      .panel-body
+        small Success
+        .progress
+          .progress-bar.progress-bar-success aria-valuemax="100" aria-valuemin="0" aria-valuenow="72" role="progressbar" style=("width: 72%") 
+            span.sr-only 72% Complete
+        small Info
+        .progress
+          .progress-bar.progress-bar-info.progress-bar-striped.active aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" style=("width: 20%") 
+            span.sr-only 20% Complete
+        small Warning
+        .progress
+          .progress-bar.progress-bar-warning aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" style=("width: 60%") 
+            span.sr-only 60% Complete (warning)
+        small Danger
+        .progress
+          .progress-bar.progress-bar-danger aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" style=("width: 80%") 
+            span.sr-only 80% Complete
+      /! /panel-body
+    /! /panel
+    hr/
+    /! tabs
+    .panel
+      ul#myTab.nav.nav-tabs
+        li.active
+          a data-toggle="tab" href="#profile"  Profile
+        li
+          a data-toggle="tab" href="#messages"  Messages
+        li
+          a data-toggle="tab" href="#settings"  Settings
+      .tab-content
+        #profile.tab-pane.active.well
+          h4
+            i.glyphicon.glyphicon-user
+          | Lorem profile dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+          p Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis dolor, in sagittis nisi.
+        #messages.tab-pane.well
+          h4
+            i.glyphicon.glyphicon-comment
+          | Message ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+          p Quisque mauris augu.
+        #settings.tab-pane.well
+          h4
+            i.glyphicon.glyphicon-cog
+          | Lorem settings dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+          p Quisque mauris augue, molestie.
+    /! /tabs
+    hr/
+    .panel.panel-default
+      .panel-heading
+        h4 New Requests
+      .panel-body
+        .list-group
+          a.list-group-item.active href="#"  Hosting virtual mailbox serv..
+          a.list-group-item href="#"  Dedicated server doesn't..
+          a.list-group-item href="#"  RHEL 6 install on new..
+  /! /col
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        h4 Notices
+      .panel-body
+        .alert.alert-info
+          button.close data-dismiss="alert" type="button"  ×
+          | This is a dismissable alert.. just sayin'.
+        p This is a dashboard-style layout that uses Bootstrap 3. You can use this template as a starting point to create something more unique.
+        p
+          | Visit the Bootstrap Playground at
+          a href="http://bootply.com"  Bootply
+          | to tweak this layout or discover more useful code snippets.
+    .table-responsive
+      table.table.table-striped
+        thead
+          tr
+            th Visits
+            th ROI
+            th Source
+        tbody
+          tr
+            td 45
+            td 2.45%
+            td Direct
+          tr
+            td 289
+            td 56.2%
+            td Referral
+          tr
+            td 98
+            td 25%
+            td Type
+          tr
+            td ..
+            td ..
+            td ..
+          tr
+            td ..
+            td ..
+            td ..
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          i.glyphicon.glyphicon-wrench.pull-right
+          h4 Post Request
+      .panel-body
+        form.form.form-vertical
+          .control-group
+            label Name
+            .controls
+              input.form-control placeholder=("Enter Name") type="text" /
+          .control-group
+            label Message
+            .controls
+              textarea.form-control
+          .control-group
+            label Category
+            .controls
+              select.form-control
+                option options
+          .control-group
+            label
+            .controls
+              button.btn.btn-primary type="submit" 
+                | Post
+      /! /panel content
+    /! /panel
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          h4 Engagement
+      .panel-body
+        .col-xs-4.text-center
+          img.img-circle.img-responsive src="http://placehold.it/80/BBBBBB/FFF" /
+        .col-xs-4.text-center
+          img.img-circle.img-responsive src="http://placehold.it/80/EFEFEF/555" /
+        .col-xs-4.text-center
+          img.img-circle.img-responsive src="http://placehold.it/80/EEEEEE/222" /
+    /! /panel
+  /! /col-span-6
+/! /row
+hr/
+a href="#" 
+  strong
+    i.glyphicon.glyphicon-comment
+    | Discussions
+hr/
+.row
+  .col-md-12
+    ul.list-group
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-flash
+          small (3 mins ago)
+          | The 3rd page reports don't contain any links. Does anyone know why..
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-flash
+          small (1 hour ago)
+          | Hi all, I've just post a report that show the relationship betwe..
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-heart
+          small (2 hrs ago)
+          | Paul. That document you posted yesterday doesn't seem to contain the over..
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-heart-empty
+          small (4 hrs ago)
+          | The map service on c243 is down today. I will be fixing the..
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-heart
+          small (yesterday)
+          | I posted a new document that shows how to install the services layer..
+      li.list-group-item
+        a href="#" 
+          i.glyphicon.glyphicon-flash
+          small (yesterday)
+          | \..

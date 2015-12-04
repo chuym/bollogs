@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'sass-rails', '>= 3.2'
+gem 'slim'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
