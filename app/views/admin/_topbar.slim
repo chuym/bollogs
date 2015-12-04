@@ -16,7 +16,6 @@
           li
             a href="#"  My Profile
       li
-        | <%= link_to("admin/logout") do %
-        i.glyphicon.glyphicon-lock
-        | Logout
-        | <% end %>
+        = link_to("admin/logout") do
+          i.glyphicon.glyphicon-lock
+          | Logout

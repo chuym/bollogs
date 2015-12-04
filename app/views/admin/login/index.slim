@@ -8,12 +8,12 @@ div.panel.panel-default.center-block
       div.form-group
         label for="username"
           = t("auth.username")
-        | <input type="text" class="form-control" id="username" name="login[username]" placeholder="#{t('auth.username')}">
+        input#username.form-control name="login[username]" type="text" placeholder="#{t('auth.username')}"
 
       div.form-group
         label for="password"
           = t("auth.password")
-        | <input type="text" class="form-control" id="password" name="login[password]" placeholder="#{t('auth.password')}">
+        input#password.form-control type="password" name="login[password]" placeholder="#{t('auth.password')}"
 
       button.btn.btn-default type="submit"
         = t("auth.login")
