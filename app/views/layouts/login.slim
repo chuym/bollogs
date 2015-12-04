@@ -11,12 +11,12 @@ html lang="en"
     = csrf_meta_tags
 
   body
-    div#top-nav.navbar.navbar-inverse.navbar-static-top
+    #top-nav.navbar.navbar-inverse.navbar-static-top
       = render 'admin/topbar'
 
-    div.container-fluid
-      div.row
-        div.col-sm-offset-4.col-sm-4
+    .container-fluid
+      .row
+        .col-sm-offset-4.col-sm-4
           == yield
     footer.text-center
       |
