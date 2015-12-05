@@ -4,18 +4,21 @@
       span.icon-bar
       span.icon-bar
       span.icon-bar
-    a.navbar-brand href="#"  Dashboard
-  .navbar-collapse.collapse
-    ul.nav.navbar-nav.navbar-right
-      li.dropdown
-        a.dropdown-toggle data-toggle="dropdown" href="#" role="button" 
-          i.glyphicon.glyphicon-user
-          | Admin
-          span.caret
-        ul#g-account-menu.dropdown-menu role="menu" 
-          li
-            a href="#"  My Profile
-      li
-        = link_to("admin/logout") do
-          i.glyphicon.glyphicon-lock
-          | Logout
+    a.navbar-brand href="#"
+      = t("admin.dashboard.title")
+  - if logged_in?
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav.navbar-right
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#" role="button" 
+            i.glyphicon.glyphicon-user
+            = current_user.name
+            span.caret
+          ul#g-account-menu.dropdown-menu role="menu" 
+            li
+              a href="#"
+                = t("admin.account.profile")
+        li
+          = link_to("admin/logout") do
+            i.glyphicon.glyphicon-lock
+            = t("admin.account.logout")

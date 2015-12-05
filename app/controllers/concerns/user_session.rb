@@ -1,5 +1,9 @@
 module UserSession extend ActiveSupport::Concern
 
+  included do
+    helper_method :logged_in?, :current_user
+  end
+
   protected
 
   def logged_in?

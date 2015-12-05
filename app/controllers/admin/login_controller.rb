@@ -1,5 +1,6 @@
 module Admin
   class LoginController < ApplicationController
+    include UserSession
     layout 'login'
 
     def index
@@ -11,7 +12,7 @@ module Admin
         session[:user_id] = user.id
         redirect_to controller: 'dashboard', action: 'index'
       else
-        flash[:error] = t('errors.authentication.failed')
+        flash[:error] = t('admin.errors.auth.failed')
         render :index, status: :unauthorized
       end
     end

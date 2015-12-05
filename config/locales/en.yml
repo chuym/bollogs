@@ -1,8 +1,15 @@
 en:
-  auth:
-    username: Username
-    password: Password
-    login: Login
-  errors:
-    authentication:
-      failed: <strong>Failed to login.</strong> Check your credentials and try again.
+# Admin Panel I18n
+  admin:
+    auth:
+      username: Username
+      password: Password
+      login: Login
+    dashboard:
+      title: Bollogs Admin Panel
+    account:
+      profile: My Profile
+      logout: Logout
+    errors:
+      auth:
+        failed: <strong>Failed to login.</strong> Check your credentials and try again.

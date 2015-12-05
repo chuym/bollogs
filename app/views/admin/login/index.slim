@@ -3,17 +3,17 @@
     = form_tag("/admin/login", method: "post") do
       - if flash[:error]
         .alert.alert-danger role="alert"
-          = flash[:error]
+          == flash[:error]
 
       .form-group
         label for="username"
-          = t("auth.username")
-        input#username.form-control name="login[username]" type="text" placeholder="#{t('auth.username')}"
+          = t("admin.auth.username")
+        input#username.form-control name="login[username]" type="text" placeholder="#{t('admin.auth.username')}"
 
       .form-group
         label for="password"
-          = t("auth.password")
-        input#password.form-control type="password" name="login[password]" placeholder="#{t('auth.password')}"
+          = t("admin.auth.password")
+        input#password.form-control type="password" name="login[password]" placeholder="#{t('admin.auth.password')}"
 
       button.btn.btn-default type="submit"
-        = t("auth.login")
+        = t("admin.auth.login")
