@@ -7,9 +7,12 @@ en:
       login: Login
     dashboard:
       title: Bollogs Admin Panel
+      coming_soon: Comming Soon
     account:
       profile: My Profile
       logout: Logout
+    navbar:
+      posts: Posts
     errors:
       auth:
         failed: <strong>Failed to login.</strong> Check your credentials and try again.
