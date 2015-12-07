@@ -1,0 +1,28 @@
+.page-header
+  h1
+    = t("admin.posts.new")
+
+form#post
+  .row
+    .col-sm-4.col-sm-8-offset
+      .form-group
+        label for="title" = t("admin.posts.post_title")
+        input.form-control type="text" placeholder="#{t('admin.posts.post_title')}"
+      .form-group
+        label for="title" = t("admin.posts.javascripts")
+        select.form-control
+          option = t("admin.posts.select_javascript")
+          option jQuery
+          option mathjax
+      ul.list-group
+        li.list-group-item
+          button.close type="button" aria-label="Close"
+            span aria-hidden="true" &times;
+          | bootstrap
+    .col-sm-12
+      .form-group
+        label for="content" = t("admin.posts.content")
+        textarea.form-control rows="10" placeholder="#{t('admin.posts.markdown_supported')}"
+  .pull-right
+    button.btn.btn-success.btn-lg type="submit" = t("admin.posts.submit")
+    button.btn.btn-default.btn-lg type="button" = t("admin.posts.cancel")

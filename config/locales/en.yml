@@ -15,6 +15,12 @@ en:
       posts: Posts
     posts:
       index: Posts Index
+      new: New Post
+      select_javascript: Select Javascripts to include
+      javascripts: Javascripts
+      content: Content
+      markdown_supported: Markdown is supported.
+      post_title: Post Title
     errors:
       auth:
         failed: <strong>Failed to login.</strong> Check your credentials and try again.
