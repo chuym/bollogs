@@ -13,6 +13,8 @@ en:
       logout: Logout
     navbar:
       posts: Posts
+    posts:
+      index: Posts Index
     errors:
       auth:
         failed: <strong>Failed to login.</strong> Check your credentials and try again.

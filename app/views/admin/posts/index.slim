@@ -1,0 +1,31 @@
+.page-header
+  h1
+    = t("admin.posts.index")
+
+table.table.table-stripped
+  thead
+    tr
+      th
+        | #
+      th
+        = t("admin.posts.title")
+      th
+        = t("admin.posts.author")
+      th
+        = t("admin.posts.created")
+      th
+        = t("admin.posts.actions")
+  tbody
+    tr
+      td
+        | 1
+      td
+        | CLRS Algorithms
+      td
+        | admin
+      td
+        | 2015-12-06
+      td
+        a href="#"
+          i.glyphicon.glyphicon-pencil
+          i.glyphicon.glyphicon-trash

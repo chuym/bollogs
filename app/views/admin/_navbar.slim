@@ -1,18 +1,18 @@
 a href="#" 
   strong
     i.glyphicon.glyphicon-wrench
-    | Tools
+    = t("admin.navbar.tools")
 hr/
 ul.nav.nav-stacked
   li.nav-header
-    a href="#" 
+    = link_to("admin/posts") do
       i.glyphicon.glyphicon-book
       = t("admin.navbar.posts")
 hr/
 a href="#" 
   strong
     i.glyphicon.glyphicon-link
-    | Resources
+    = t("admin.navbar.resources")
 hr/
 ul.nav.nav-pills.nav-stacked
   li.nav-header
