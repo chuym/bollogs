@@ -10,13 +10,15 @@ table.table.table-stripped
       th = t("admin.posts.author")
       th = t("admin.posts.created")
       th = t("admin.posts.actions")
-  tbody
-    tr
-      td 1
-      td CLRS Algorithms
-      td admin
-      td 2015-12-06
-      td
-        a href="#"
-          i.glyphicon.glyphicon-pencil
-          i.glyphicon.glyphicon-trash
+  tbody#post_list
+    - @posts.each_with_index do |p, i|
+      tr
+        td = i
+        td = p.title
+        td = p.author.name
+        td = p.created_at
+        td
+          a href="#"
+            i.glyphicon.glyphicon-pencil
+            i.glyphicon.glyphicon-trash
+  

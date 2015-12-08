@@ -1,6 +1,11 @@
 module Admin
   class PostsController < BaseController
 
+    def index
+      @posts = Post.all
+      render "index"
+    end
+
     def new
       render "post"
     end

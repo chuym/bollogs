@@ -1,6 +1,7 @@
 module Admin
   class LoginController < ApplicationController
     include UserSession
+    rescue_from ActionController::ParameterMissing, with: :bad_request
     layout 'login'
 
     def index
@@ -26,6 +27,10 @@ module Admin
 
     def login_request
       params.require(:login).permit(:username, :password)
+    end
+
+    def bad_request
+      render :index, status: :bad_request
     end
 
   end

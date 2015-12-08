@@ -9,8 +9,8 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   def admin_login(user, password='password')
     open_session do |s|
-      s.post "/admin/login", login: { username: user.username, password: password }
-      assert_response :ok
+      s.post_via_redirect "/admin/login", login: { username: user.username, password: password }
+      assert_equal "/admin", s.path
     end
   end
 end

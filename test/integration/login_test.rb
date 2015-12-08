@@ -18,5 +18,10 @@ class LoginTest < ActionDispatch::IntegrationTest
   end
 
   test "should return bad request if missing login parameters" do
+    get "/admin/login"
+    assert_response :ok
+    post_via_redirect "/admin/login"
+    assert_response :bad_request
+    assert_equal '/admin/login', path
   end
 end
