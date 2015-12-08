@@ -7,4 +7,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def admin_login(user, password='password')
+    open_session do |s|
+      s.post "/admin/login", login: { username: user.username, password: password }
+      assert_response :ok
+    end
+  end
 end
