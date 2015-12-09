@@ -23,5 +23,8 @@ en:
       post_title: Post Title
     errors:
       missing_parameter: "Missing parameter on request: %{parameter}"
+      not_found: Page Not Found
+      not_found_description: The page you were looking for does not exist.
+      go_back: Go back
       auth:
         failed: <strong>Failed to login.</strong> Check your credentials and try again.

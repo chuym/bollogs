@@ -1,9 +1,15 @@
 module Admin
   class PostsController < BaseController
+    rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
     def index
       @posts = Post.all
       render "index"
+    end
+
+    def show
+      @post = Post.find params[:id]
+      render "post"
     end
 
     def new
