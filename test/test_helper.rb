@@ -13,4 +13,9 @@ class ActiveSupport::TestCase
       assert_equal "/admin", s.path
     end
   end
+
+  def check_login_redirect(method, uri)
+    request_via_redirect method, uri
+    assert_equal "/admin/login", path
+  end
 end

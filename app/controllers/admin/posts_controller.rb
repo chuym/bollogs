@@ -11,19 +11,26 @@ module Admin
     end
 
     def create
-      @post = Post.new post_profile
-      @post.author = current_user
-      if @post.save?
-        redirect_to :index
-      else
-        render "post", status: :bad_request
+      begin
+        profile = post_profile
+        @post = Post.new profile
+        @post.author = current_user
+        if @post.valid?
+          @post.save
+          redirect_to "index"
+        else
+          redirect_to({ action: 'new' }, error: @post.errors)
+        end
+      rescue ActionController::ParameterMissing
+        errors = { :base => t("admin.errors.missing_parameter", parameter: "post") }
+        redirect_to({ action: "new" }, error: errors)
       end
     end
 
     private
 
     def post_profile
-      params.require(:post).permit(:name, :javascripts, :content)
+      params.require(:post).permit(:title, :javascripts, :content)
     end
   end
 end

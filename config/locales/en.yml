@@ -22,5 +22,6 @@ en:
       markdown_supported: Markdown is supported.
       post_title: Post Title
     errors:
+      missing_parameter: "Missing parameter on request: %{parameter}"
       auth:
         failed: <strong>Failed to login.</strong> Check your credentials and try again.

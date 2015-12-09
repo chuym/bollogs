@@ -2,7 +2,7 @@
   h1
     = t("admin.posts.new")
 
-form#post
+= form_tag("/admin/posts", method: "post", id: "post") do
   .row
     .col-sm-4.col-sm-8-offset
       .form-group
